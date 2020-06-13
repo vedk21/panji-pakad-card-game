@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SessionStorageService } from '../client-storage/session-storage.service';
+import { StorageConstants } from '../../utils/constants/storage.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,6 @@ export class AuthenticationService {
   ) { }
 
   isAuthenticated(): boolean {
-    this.isUserIdPresentInStorage();
-    return true;
-  }
-
-  private isUserIdPresentInStorage() {
     
   }
 }
