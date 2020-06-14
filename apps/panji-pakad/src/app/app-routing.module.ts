@@ -9,6 +9,9 @@ const routes = [
   {
     path: 'auth', component: AuthenticationComponent, children: [
       {
+        path: '', redirectTo: 'login', pathMatch: 'full'
+      },
+      {
         path: 'login', loadChildren: () => import(`./views/authentication/login/login.module`).then(m => m.LoginModule)
       },
       {
